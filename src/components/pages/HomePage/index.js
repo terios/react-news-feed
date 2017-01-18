@@ -1,12 +1,15 @@
 import React from 'react'
 
-import { PageTemplate } from 'components'
-import RaisedButton from 'material-ui/RaisedButton';
+import { PageTemplate, CustomGridList } from 'components'
+
 
 const HomePage = () => {
   return (
-    <PageTemplate>Hello World
-    </PageTemplate>
+    <div>
+      <PageTemplate>
+        <CustomGridList/>
+      </PageTemplate>
+    </div>
   )
 }
 

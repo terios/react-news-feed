@@ -7,12 +7,16 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 
 
+const Content = styled.section`
+   font-family: roboto;
+`
+
 const PageTemplate = ({ children, ...props }) => {
   console.log(props)
   return (
-    <div {...props}>
-      <AppBar title="My AppBar"/>
-      {children}    </div>
+    <Content {...props}>
+      <AppBar title="Title in here"/>
+      {children}    </Content>
   )
 }
 
