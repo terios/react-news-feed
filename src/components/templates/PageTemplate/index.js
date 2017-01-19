@@ -1,27 +1,24 @@
 import React, { PropTypes } from 'react'
 import styled from 'styled-components'
-
 import { Link } from 'react-router';
-import AppBar from 'material-ui/AppBar';
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-
 
 const Content = styled.section`
    font-family: roboto;
 `
 
-const PageTemplate = ({ children, ...props }) => {
-  console.log(props)
+const PageTemplate = ({header, children, ...props }) => {
   return (
-    <Content {...props}>
-      <AppBar title="Title in here"/>
-      {children}    </Content>
+      <div {...props}>
+        <header>{header}</header>
+        <Content>{children}</Content>
+      </div>
   )
 }
 
+
 PageTemplate.propTypes = {
+  header: PropTypes.any.isRequired,
   children: PropTypes.any.isRequired
-};
+}
 
 export default PageTemplate

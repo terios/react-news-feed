@@ -1,16 +1,24 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-import { PageTemplate, CustomGridList } from 'components'
+import {PageTemplate, Header} from 'components'
+import {FeedListContainer} from 'containers'
+
+class HomePage extends Component {
 
 
-const HomePage = () => {
-  return (
-    <div>
-      <PageTemplate>
-        <CustomGridList/>
-      </PageTemplate>
-    </div>
-  )
+  render() {
+    return (
+      <div>
+        <PageTemplate header={< Header />}>
+          <FeedListContainer elementClick={this.handleClick}/>
+        </PageTemplate>
+      </div>
+    )
+  }
+
+  handleClick() {
+    console.log('clicked on element ->');
+  }
 }
 
 export default HomePage
